@@ -29,3 +29,5 @@ The Windows collector is supplied for a personal lab and was not executed in the
 ![Verified restore](03-backup-recovery/screenshots/run.png)
 
 Read [START-HERE.md](START-HERE.md) for the complete sequence and [UPLOAD-TO-GITHUB.md](UPLOAD-TO-GITHUB.md) for publishing instructions.
+
+I ran these portfolio labs on my MacBook. All five automated tests passed.
