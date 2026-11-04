@@ -4,11 +4,13 @@
 - Device: MacBook Pro
 - Operating system: macOS
 - Python version: 3.9.6
-- Run date: ADD YOUR ACTUAL RUN DATE
+- Run date: November 3, 2026
 
 ## Commands I ran
+```bash
 python3 run_all.py
 python3 -m unittest discover -s tests -v
+```
 
 ## Endpoint readiness
 The before scenario correctly failed the readiness checks.
@@ -29,4 +31,4 @@ All five automated tests passed on my MacBook.
 The Windows PowerShell collector has not been tested.
 
 ## My observations
-ADD WHAT YOU LEARNED OR FOUND CONFUSING HERE.
+The endpoint “before” result showed PASS even though readiness was false. This means the test correctly detected the expected failure. The network and backup labs then verified successful connection and file recovery.
