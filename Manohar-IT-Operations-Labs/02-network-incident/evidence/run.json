@@ -1,0 +1,14 @@
+{
+  "command": "python lab.py",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "result": {
+    "scope": "Actual local service; no AWS resources used",
+    "host": "127.0.0.1",
+    "port": 49370,
+    "before": "UNREACHABLE",
+    "after": "CONNECTED",
+    "http_status": 200,
+    "body": "LAB service healthy"
+  }
+}

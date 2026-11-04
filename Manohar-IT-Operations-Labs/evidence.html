@@ -1,0 +1,59 @@
+<!doctype html><meta charset="utf-8"><title>IT Operations Lab Evidence</title><style>body{font:17px system-ui;background:#f3f6fa;color:#15283b;margin:40px auto;max-width:1000px;padding:0 25px}h1{font-size:36px}article{background:white;border:1px solid #ccd8e3;border-radius:12px;padding:24px;margin:24px 0}pre{font:15px monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#edf3f8;padding:20px}small{color:#44576a}</style><h1>IT Operations Lab Evidence</h1><p>Manohar Eddagiri | Portfolio lab bundle</p><p>Actual script output. Endpoint inputs are synthetic fixtures. Network and recovery operations ran locally.</p><small>Generated 2026-11-04T04:49:53.426525+00:00 | Python 3.9.6 | Darwin</small><article id="01-endpoint-readiness-before"><h2>01-endpoint-readiness / before</h2><p>PASS: observed exit code matches expected outcome.</p><pre>{
+  &quot;command&quot;: &quot;python check.py fixtures/before.json&quot;,
+  &quot;exit_code&quot;: 1,
+  &quot;expected_exit_code&quot;: 1,
+  &quot;result&quot;: {
+    &quot;asset&quot;: &quot;LAB-WOW-01&quot;,
+    &quot;checks&quot;: {
+      &quot;free_disk_gb&quot;: false,
+      &quot;spooler&quot;: false,
+      &quot;domain_joined&quot;: true
+    },
+    &quot;ready&quot;: false,
+    &quot;scope&quot;: &quot;Three technical checks only; manual acceptance still required&quot;
+  }
+}</pre></article><article id="01-endpoint-readiness-after"><h2>01-endpoint-readiness / after</h2><p>PASS: observed exit code matches expected outcome.</p><pre>{
+  &quot;command&quot;: &quot;python check.py fixtures/after.json&quot;,
+  &quot;exit_code&quot;: 0,
+  &quot;expected_exit_code&quot;: 0,
+  &quot;result&quot;: {
+    &quot;asset&quot;: &quot;LAB-WOW-01&quot;,
+    &quot;checks&quot;: {
+      &quot;free_disk_gb&quot;: true,
+      &quot;spooler&quot;: true,
+      &quot;domain_joined&quot;: true
+    },
+    &quot;ready&quot;: true,
+    &quot;scope&quot;: &quot;Three technical checks only; manual acceptance still required&quot;
+  }
+}</pre></article><article id="02-network-incident-run"><h2>02-network-incident / run</h2><p>PASS: observed exit code matches expected outcome.</p><pre>{
+  &quot;command&quot;: &quot;python lab.py&quot;,
+  &quot;exit_code&quot;: 0,
+  &quot;expected_exit_code&quot;: 0,
+  &quot;result&quot;: {
+    &quot;scope&quot;: &quot;Actual local service; no AWS resources used&quot;,
+    &quot;host&quot;: &quot;127.0.0.1&quot;,
+    &quot;port&quot;: 49370,
+    &quot;before&quot;: &quot;UNREACHABLE&quot;,
+    &quot;after&quot;: &quot;CONNECTED&quot;,
+    &quot;http_status&quot;: 200,
+    &quot;body&quot;: &quot;LAB service healthy&quot;
+  }
+}</pre></article><article id="03-backup-recovery-run"><h2>03-backup-recovery / run</h2><p>PASS: observed exit code matches expected outcome.</p><pre>{
+  &quot;command&quot;: &quot;python lab.py&quot;,
+  &quot;exit_code&quot;: 0,
+  &quot;expected_exit_code&quot;: 0,
+  &quot;result&quot;: {
+    &quot;scope&quot;: &quot;Actual temporary file copy and restore&quot;,
+    &quot;files&quot;: 2,
+    &quot;backup_hashes_match&quot;: true,
+    &quot;corruption_detected&quot;: true,
+    &quot;missing_file_detected&quot;: true,
+    &quot;restore_hashes_match&quot;: true,
+    &quot;sha256&quot;: {
+      &quot;assets.csv&quot;: &quot;cc110bbe85a06a3f1ffe95e2535235b38508b1d64cda41e2d2ceaf62fde469ce&quot;,
+      &quot;app.conf&quot;: &quot;19930a5298ba5c1065060d4ff9b32a073b428f5fc38780e25589ba822bd5a5b2&quot;
+    },
+    &quot;cleanup&quot;: &quot;Temporary files removed on exit&quot;
+  }
+}</pre></article>

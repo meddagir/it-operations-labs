@@ -1,0 +1,18 @@
+{
+  "command": "python lab.py",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "result": {
+    "scope": "Actual temporary file copy and restore",
+    "files": 2,
+    "backup_hashes_match": true,
+    "corruption_detected": true,
+    "missing_file_detected": true,
+    "restore_hashes_match": true,
+    "sha256": {
+      "assets.csv": "cc110bbe85a06a3f1ffe95e2535235b38508b1d64cda41e2d2ceaf62fde469ce",
+      "app.conf": "19930a5298ba5c1065060d4ff9b32a073b428f5fc38780e25589ba822bd5a5b2"
+    },
+    "cleanup": "Temporary files removed on exit"
+  }
+}

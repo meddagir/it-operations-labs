@@ -1,0 +1,15 @@
+{
+  "command": "python check.py fixtures/after.json",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "result": {
+    "asset": "LAB-WOW-01",
+    "checks": {
+      "free_disk_gb": true,
+      "spooler": true,
+      "domain_joined": true
+    },
+    "ready": true,
+    "scope": "Three technical checks only; manual acceptance still required"
+  }
+}
