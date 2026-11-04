@@ -1,11 +1,32 @@
-# My repeat-run log
+# My Lab Run Notes
 
-Fill this after doing the work. Do not invent dates or results.
+## Environment
+- Device: MacBook Pro
+- Operating system: macOS
+- Python version: 3.9.6
+- Run date: ADD YOUR ACTUAL RUN DATE
 
-| Project | Date | My device / OS | Command | Observed result | What I changed or learned |
-|---|---|---|---|---|---|
-| Endpoint | Pending | | | | |
-| Network | Pending | | | | |
-| Recovery | Pending | | | | |
+## Commands I ran
+python3 run_all.py
+python3 -m unittest discover -s tests -v
 
-For each project, add one screenshot from your own run and one paragraph in your own words. Explain a failure you observed and the check that helped you understand it.
+## Endpoint readiness
+The before scenario correctly failed the readiness checks.
+The after scenario passed.
+These checks used sample endpoint data, not a real Windows computer.
+
+## Network troubleshooting
+The local service was initially unreachable.
+After the lab started the listener, the connection succeeded
+and the HTTP check returned status 200.
+
+## Backup recovery
+The lab detected a corrupted file and a missing file.
+The restored files matched the original SHA-256 hashes.
+
+## Test results
+All five automated tests passed on my MacBook.
+The Windows PowerShell collector has not been tested.
+
+## My observations
+ADD WHAT YOU LEARNED OR FOUND CONFUSING HERE.
